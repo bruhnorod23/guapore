@@ -1,0 +1,14 @@
+//= link_tree ../images
+//= link_directory ../stylesheets .css
+//= link_tree ../../javascript .js
+//= link_tree ../../../vendor/javascript .js
+//= link jquery.min.js
+//= link jquery_ujs.js
+//= link popper.js
+//= link bootstrap.min.js
+//= link vendor/jquery.min.js
+//= link nxtBtn3.js
+//= link select-fornecedor.js
+//= link select-estado.js
+//= link animation-size.js
+//= link capture_and_send.js

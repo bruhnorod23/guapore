@@ -1,0 +1,160 @@
+.container-fluid .navbar-nav .inter-header {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.inter-container {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+
+}
+
+.inter-container-p {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+
+}
+
+.text-overlay .inter-container-btn {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+
+}
+
+.text-line-h1 {
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.text-line-h1-card {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.text-line-h2-card {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.text-line-h5-card {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.text-line-h5-card-sub {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.text-line-p-card {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  padding: 0;
+  margin: 0;
+}
+
+.text-bold-perso {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.img-p-text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  padding: 0;
+  margin: 0;
+
+}
+
+.text-p-city {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  padding: 0;
+  margin: 0;
+}
+
+.text-p-comment {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  padding: 0;
+  margin: 0;
+}
+
+.text-h2-comment {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  padding: 0;
+  margin: 0;
+}
+
+.text-h4-comment {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  padding: 0;
+  margin: 0;
+}

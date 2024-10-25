@@ -17,13 +17,8 @@ jobs:
         ruby-version: '3.3.3'
     - name: Install dependencies
       run: |
-        echo 'GEM_HOME=$HOME/.gem' >> $GITHUB_ENV
-        echo 'PATH=$HOME/.gem/bin:$PATH' >> $GITHUB_ENV
         gem install bundler
         bundle install
-    - name: Adjust permissions
-      run: |
-        chmod +x bin/rails
     - name: Set up database
       run: |
         bundle exec rails db:setup

@@ -19,6 +19,9 @@ jobs:
       run: |
         gem install bundler
         bundle install
+    - name: Adjust permissions
+      run: |
+        chmod +x bin/rails
     - name: Set up database
       run: |
         bin/rails db:setup

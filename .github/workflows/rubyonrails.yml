@@ -19,6 +19,8 @@ jobs:
       run: |
         gem install bundler
         bundle install
+    - name: Add Ruby to PATH
+      run: echo 'export PATH="/opt/hostedtoolcache/Ruby/3.3.3/x64/bin:$PATH"' >> $GITHUB_ENV
     - name: Adjust permissions
       run: |
         chmod +x bin/rails

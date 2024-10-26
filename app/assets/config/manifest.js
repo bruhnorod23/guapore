@@ -12,3 +12,4 @@
 //= link select-estado.js
 //= link animation-size.js
 //= link capture_and_send.js
+//= link application.css

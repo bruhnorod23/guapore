@@ -32,25 +32,7 @@ class FormSubmit {
       formObject["recoverFantasia"] = document.querySelector("#recoverFantasia").value;
       formObject["recoverEmail"] = document.querySelector("#recoverEmail").value;
       formObject["recoverTipoContato"] = document.querySelector("#recoverTipoContato").value;
-      formObject["recoverCpfcontato"] = document.querySelector("#recoverCpfcontato").value;
-      formObject["recoverNomeContato"] = document.querySelector("#recoverNomeContato").value;
-      formObject["recoverTelContato"] = document.querySelector("#recoverTelContato").value;
-      formObject["recoverCelContato"] = document.querySelector("#recoverCelContato").value;
-      formObject["recoverEmailContato"] = document.querySelector("#recoverEmailContato").value;
-      formObject["recoverBanco"] = document.querySelector("#recoverBanco").value;
-      formObject["recoverTipoConta"] = document.querySelector("#recoverTipoConta").value;
-      formObject["recoverNroAgencia"] = document.querySelector("#recoverNroAgencia").value;
-      formObject["recoverDigitoAgencia"] = document.querySelector("#recoverDigitoAgencia").value;
-      formObject["recoverNroConta"] = document.querySelector("#recoverNroConta").value;
-      formObject["recoverDigitoConta"] = document.querySelector("#recoverDigitoConta").value;
-      formObject["recoverCep"] = document.querySelector("#recoverCep").value;
-      formObject["recoverEstado"] = document.querySelector("#recoverEstado").value;
-      formObject["recoverCidade"] = document.querySelector("#recoverCidade").value;
-      formObject["recoverLogradouro"] = document.querySelector("#recoverLogradouro").value;
-      formObject["recoverBairro"] = document.querySelector("#recoverBairro").value;
-      formObject["recoverReceptor"] = document.querySelector("#recoverReceptor").value;
-      formObject["recoverCelReceptor"] = document.querySelector("#recoverCelReceptor").value;
-      formObject["recoverEmailReceptor"] = document.querySelector("#recoverEmailReceptor").value;
+      
     
       return formObject;
     }

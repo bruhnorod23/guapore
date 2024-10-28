@@ -422,6 +422,7 @@
         action="https://formsubmit.co/ajax/588687fd09ff56fe52f116601be3533a"
         method="POST"
         data-form
+        id="cform"
         >
           <div class="card-body tela animated" id="tela8">
             <div class="row mt-0 align-items-start">
@@ -893,7 +894,29 @@
 </div>
   
 </div>
-  <script src="./js/app.js"></script>
+<script src="https://cdn.emailjs.com/lib/2.3.2/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("c0zSu_m5m48wyQISP"); // Substitua "YOUR_USER_ID" pelo seu ID de usuário do EmailJS
+        })();
+
+        document.getElementById('cform').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const serviceID = 'form_envio'; // Substitua "YOUR_SERVICE_ID" pelo seu ID de serviço do EmailJS
+            const templateID = 'template_1gvhc4t'; // Substitua "YOUR_TEMPLATE_ID" pelo seu ID de template do EmailJS
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(function(response) {
+                    console.log('E-mail enviado com sucesso!', response.status, response.text);
+                    alert('Mensagem enviada com sucesso!');
+                }, function(error) {
+                    console.log('Erro ao enviar e-mail...', error);
+                    alert('Não foi possível enviar a mensagem.');
+                });
+        });
+    </script>
+  <!--script src="./js/app.js"></script-->
   <script src="./js/next-page.js"></script>
   <script src="./js/animation-size.js"></script>
   <script src="./js/select-fornecedor.js"></script>

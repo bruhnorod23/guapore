@@ -60,6 +60,7 @@ class FormSubmit {
       event.preventDefault();
       event.target.disabled = true;
       event.target.innerText = "Enviando...";
+      $('#sendingMessage').text('Estamos enviando as informações, aguarde um momento.');
     }
   
     async sendForm(event) {
@@ -77,7 +78,12 @@ class FormSubmit {
       } catch (error) {
         this.displayError();
         throw new Error(error);
-      }
+      } finally { 
+        // Atualiza a mensagem após o envio 
+        $('#sendingMessage').text('Informações enviadas, obrigado por aguardar :)');
+        $('#titleSendingMessage').text('Tudo certo!'); 
+        $('#returnButton').show(); // Mostra o botão para retornar à página principal 
+        }
     }
   
     init() {

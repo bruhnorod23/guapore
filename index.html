@@ -419,6 +419,7 @@
           </div>
           <!-- tela 8 REVISÃO DE DADOS -->
         <form id="cform" action="https://formsubmit.co/ajax/1662.suporte@gmail.com" method="POST" data-form>
+        <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_subject" value="Nova submissão de formulário!">
         <input type="hidden" name="_captcha" value="false">
 
@@ -869,18 +870,18 @@
           <div class="card-body tela animated" id="tela9">
             <div class="row p-5 mt-0 align-items-center">
               <div class="col-12">
-                <h1 class="text-center p-0 mb-0 fw-normal display-3">Obrigado!</h1>
+                <h1 id="titleSendingMessage" class="text-center p-0 mb-0 fw-normal display-3">Estamos quase lá!</h1>
               </div>
             </div>
             <div class="row p-4 align-items-center">
               <div class="col-12">
-                <h4 class="text-center custom-h4-sm p-0 mb-0 fw-normal text-muted">Agora é só aguardar, em breve entraremos em contato com você!</h4>
+                <h4 id="sendingMessage" class="text-center custom-h4-sm p-0 mb-0 fw-normal text-muted">aguarde nesta página, estamos enviando suas informações ao fornecedor!</h4>
               </div>
             </div>
             <div class="row p-5 justify-content-center">
               <div class="col-12 d-flex justify-content-center mt-4">
                 <a href="https://www.guaporevidrosro.com.br">
-                  <button type="button" class="btn btn-primary px-4 py-2 fw-normal" id="endBtn">Voltar ao site principal</button>
+                  <button type="button" class="btn btn-primary px-4 py-2 fw-normal" id="returnButton" style="display: none;">Voltar ao site principal</button>
                 </a>
               </div>
             </div>

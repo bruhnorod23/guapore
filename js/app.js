@@ -20,45 +20,37 @@ class FormSubmit {
     getFormObject() {
       const formObject = {};
     
-      const fields = [
-        "recoverFornecedor",
-        "recoverVendedor",
-        "recoverTaxas",
-        "mcc",
-        "qtdMaquininha",
-        "recoverCadunico",
-        "recoverFaturamento",
-        "recoverRazao",
-        "recoverFantasia",
-        "recoverEmail",
-        "recoverTipoContato",
-        "recoverCpfcontato",
-        "recoverNomeContato",
-        "recoverTelContato",
-        "recoverCelContato",
-        "recoverEmailContato",
-        "recoverBanco",
-        "recoverTipoConta",
-        "recoverNroAgencia",
-        "recoverDigitoAgencia",
-        "recoverNroConta",
-        "recoverDigitoConta",
-        "recoverCep",
-        "recoverEstado",
-        "recoverCidade",
-        "recoverLogradouro",
-        "recoverBairro",
-        "recoverReceptor",
-        "recoverCelReceptor",
-        "recoverEmailReceptor"
-      ];
-    
-      fields.forEach((fieldId) => {
-        const field = document.querySelector(`#${fieldId}`);
-        if (field) {
-          formObject[fieldId] = field.value;
-        }
-      });
+      // Recupera manualmente os valores dos campos
+      formObject["recoverFornecedor"] = document.querySelector("#recoverFornecedor").value;
+      formObject["recoverVendedor"] = document.querySelector("#recoverVendedor").value;
+      formObject["recoverTaxas"] = document.querySelector("#recoverTaxas").value;
+      formObject["mcc"] = document.querySelector("#mcc").value;
+      formObject["qtdMaquininha"] = document.querySelector("#qtdMaquininha").value;
+      formObject["recoverCadunico"] = document.querySelector("#recoverCadunico").value;
+      formObject["recoverFaturamento"] = document.querySelector("#recoverFaturamento").value;
+      formObject["recoverRazao"] = document.querySelector("#recoverRazao").value;
+      formObject["recoverFantasia"] = document.querySelector("#recoverFantasia").value;
+      formObject["recoverEmail"] = document.querySelector("#recoverEmail").value;
+      formObject["recoverTipoContato"] = document.querySelector("#recoverTipoContato").value;
+      formObject["recoverCpfcontato"] = document.querySelector("#recoverCpfcontato").value;
+      formObject["recoverNomeContato"] = document.querySelector("#recoverNomeContato").value;
+      formObject["recoverTelContato"] = document.querySelector("#recoverTelContato").value;
+      formObject["recoverCelContato"] = document.querySelector("#recoverCelContato").value;
+      formObject["recoverEmailContato"] = document.querySelector("#recoverEmailContato").value;
+      formObject["recoverBanco"] = document.querySelector("#recoverBanco").value;
+      formObject["recoverTipoConta"] = document.querySelector("#recoverTipoConta").value;
+      formObject["recoverNroAgencia"] = document.querySelector("#recoverNroAgencia").value;
+      formObject["recoverDigitoAgencia"] = document.querySelector("#recoverDigitoAgencia").value;
+      formObject["recoverNroConta"] = document.querySelector("#recoverNroConta").value;
+      formObject["recoverDigitoConta"] = document.querySelector("#recoverDigitoConta").value;
+      formObject["recoverCep"] = document.querySelector("#recoverCep").value;
+      formObject["recoverEstado"] = document.querySelector("#recoverEstado").value;
+      formObject["recoverCidade"] = document.querySelector("#recoverCidade").value;
+      formObject["recoverLogradouro"] = document.querySelector("#recoverLogradouro").value;
+      formObject["recoverBairro"] = document.querySelector("#recoverBairro").value;
+      formObject["recoverReceptor"] = document.querySelector("#recoverReceptor").value;
+      formObject["recoverCelReceptor"] = document.querySelector("#recoverCelReceptor").value;
+      formObject["recoverEmailReceptor"] = document.querySelector("#recoverEmailReceptor").value;
     
       return formObject;
     }

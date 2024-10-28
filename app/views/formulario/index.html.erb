@@ -1,0 +1,894 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Múltiplas Etapas</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/ce9eb7ed54.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<div class="container-fluid" id="navBar">
+  <div class="row p-4">
+    <div class="col-12">
+    </div>
+  </div>
+</div>
+
+<div class="container" id="formulario">
+  <div class="row">
+    <div class="col-12 p-3">
+      <h1 class="text-center fs-2 p-3 mb-4 border"> ATUALIZAÇÃO DE CADASTRO</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+      <div class="card w-100 p-5 p-sm-2" id="smartwizard">
+        <div class="row">
+          <!-- tela 1 INICIO -->
+          <div class="card-body tela animated" id="tela1">
+            <div class="row mt-0 margin-form-sm align-items-center">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+              <%= image_tag 'form_fp.svg', alt: 'Form Title', class: 'form-title' %>
+              </div>
+              <div class="col-12 col-sm-6 col-md-8 col-lg-8 col-xl-8 mt-2">
+                <p class="text-md-right text-sm-left p-0 mb-0 custom-font-size text-justify">Este formulário tem como propósito habilitá-lo para utilizar todos os recursos disponíveis da nossa automação em </p>
+                <h2 class="card-title text-md-right text-sm-left text-sm p-0 mb-2 mt-2 custom-font-size text-justify">maquininhas de cartão</h2>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <h6 class="card-subtitle mt-3 mb-2 text-muted text-sm-left text-md-right custom-font-size text-justify">Antes de começar, é importante entender:</h6>
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <a href="https://www.guaporevidrosro.com.br" class="card-link text-sm-left text-md-right custom-font-size text-justify fw-normal py-3"> <i class="fa-solid fa-share-from-square mr-1"></i> Por que estou preenchendo este formulário?</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-end mt-4">
+                <button type="button" class="btn btn-primary next px-4 py-2 fw-normal" id="nextBtn1">Preencher meus dados<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+              </div>
+            </div>
+          </div>
+            <!-- tela 2 POLÍTICAS -->
+          <div class="card-body tela animated" id="tela2">
+            <div class="row mt-0 margin-form-sm align-items-center">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h5 class="text-center text-sm-center p-0 mb-0 fw-bold custom-font-size text-justify">Para continuar, vamos precisar que você esteja de acordo com nossas políticas abaixo:</h5>
+              </div>
+            </div>
+            <div class="row mt-3 align-items-center">
+              <div class="col-12 col-md-5 mx-auto mt-5">
+              <%= image_tag 'terms.svg', alt: 'Form Title', class: 'form-title' %>
+              </div>
+              <div class="col-12 col-md-5 mx-auto mt-5 align-items-center justify-content-center">
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="polPrivacidade" required>
+                  <label class="form-check-label text-sm-left" for="polPrivacidade">
+                    Concordo com a <a href="#" style="text-decoration: underline;">Política de Privacidade</a>
+                  </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="termosUso" required>
+                  <label class="form-check-label" for="termosUso">
+                    Concordo com os Termos de uso
+                  </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="polPgto" required>
+                  <label class="form-check-label" for="polPgto">
+                    Concordo com a Política de pagamentos
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-end mt-4 btn-sm-align pr-0 pl-0">
+                <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-2"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                <button type="button" class="btn btn-primary next px-4 py-2 fw-normal ml-2" id="nextBtn">Avançar<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+              </div>
+            </div>
+          </div>
+          <!-- tela 3 FORNECEDOR -->
+          <div class="card-body tela animated" id="tela3">
+            <div class="row mt-0 align-items-start">
+              <div class="col-12">
+                <p class="text-left text-muted mb-0 p-0">Primeira etapa</p>
+                <h3 class="text-left p-0 mb-0 fs-1 ml-0 mt-0">Fornecedor</h3>
+              </div>
+            </div>
+            <div class="row mt-3 align-items-start">
+              <div class="col-12 col-md-6 text-left mt-0">
+                <div class="select-1-uni mb-2">
+                  <label for="unidadeFornecedor" class="form-label"><span style="color: red">*</span>Em qual unidade GUAPORÉ você efetua seus pedidos?</label>
+                  <select id="unidadeFornecedor" class="form-select unidade">
+                    <option value="IND">Indústria (Porto Velho)</option>
+                    <option value="CDZS">CD Zona Sul (Porto Velho)</option>
+                    <option value="CDAC">CD Acre (Rio Branco)</option>
+                    <option selected>Escolha uma opção</option>
+                  </select>
+                </div>
+                <div class="select-2-vend mb-2">
+                  <label for="vendedorFornecedor" class="form-label"><span style="color: red">*</span>Qual é seu vendedor?</label>
+                  <select id="vendedorFornecedor" class="form-select unidade">
+                    <option selected>Escolha uma opção</option>
+                  </select>
+                </div>
+                <legend class="col-form-label pt-0"><span style="color: red">*</span>A indústria vai financiar as taxas da sua maquininha?</legend>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Guaporé Vidros" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      Sim.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Eu fico responsável por elas.">
+                    <label class="form-check-label" for="gridRadios2">
+                      Não, eu fico responsável por elas.
+                    </label>
+                  </div>
+                </div>
+                <div class="row mt-4 pr-0">
+                  <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+                    <p class="text-sm-left custom-font-p text-justify text-md-right p-0 mb-0" style="color: red;">Observação: Os campos destacados com * são obrigatórios! </p>
+                  </div>
+                  <div class="col-12 col-md-6 d-flex justify-content-end align-items-center btn-sm-align mt-3 pr-0">
+                    <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-2"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                    <button type="button" class="btn btn-primary next px-4 py-2 fw-normal ml-2" id="nextBtn3" onclick="">Avançar<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- tela 4  DADOS EMPRESA -->
+          <div class="card-body tela animated" id="tela4">
+            <div class="row mt-0 align-items-start">
+              <div class="col-12 col-md-12">
+                <p class="text-left text-muted mb-0 p-0">Segunda etapa</p>
+                <h3 class="text-left p-0 mb-0 fs-1 ml-0 mt-0">Dados da sua empresa</h3>
+              </div>
+            </div>
+            <div class="row mt-3 align-items-start">
+              <div class="col-12 col-md-6 text-left mt-0 no-padding-sm">
+                <div class="row select-3-cnpj mb-2">
+                  <label for="tipoCadUnico" class="form-label"><span style="color: red">*</span>Digite abaixo os dados da sua empresa:</label>
+                    <div class="col-12 col-md-5">
+                      <select id="tipoCadUnico" class="form-select unidade text-muted">
+                        <option value="CNPJ">CNPJ</option>
+                        <option value="CPF">CPF</option>
+                        <option selected>CPF/CNPJ</option>
+                      </select>
+                    </div>
+                    <div class="col-12 margin-form-sm col-md-7">
+                      <input type="text" class="form-control" id="cadUnicoCliente" placeholder="Digite aqui...">
+                    </div>
+                </div>
+                  <div class="row mcc mb-2">
+                    <div class="col-12 col-md-3">
+                      <fieldset disabled>
+                        <label for="disabledTextInput" class="form-label">MCC:</label>
+                        <input type="text" id="mcc" class="form-control" placeholder="5039" value="5039">
+                      </fieldset>
+                    </div>
+                    <div class="col-12 margin-form-sm col-md-9">
+                      <label for="faturamentoCliente" class="form-label"><span style="color: red">*</span>Faturamento Mensal:</label>
+                      <input type="text" class="form-control" id="faturamentoCliente" placeholder="R$ 00.000,00...">
+                    </div>
+                  </div>
+                <div class="row mcc mb-2">
+                  <div class="col-12 col-md-8">
+                    <fieldset disabled>
+                      <label for="disabledTextInput" class="form-label"><span style="color: red">*</span>Quantidade de maquininhas:</label>
+                      <input type="text" id="qtdMaquininha" class="form-control" placeholder="1 (uma)" value="1(uma)">
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 text-left mt-0">
+                  <label for="razaoCliente" class="form-label"><span style="color: red">*</span>Razão Social:</label>
+                  <input type="text" class="form-control" id="razaoCliente" placeholder="Digite aqui...">
+                  <label for="fantasiaCliente" class="form-label"><span style="color: red">*</span>Nome Fantasia:</label>
+                  <input type="text" class="form-control" id="fantasiaCliente" placeholder="Digite aqui...">
+                  <label for="emailCliente" class="form-label"><span style="color: red">*</span>E-mail da conta:</label>
+                  <input type="email" class="form-control" id="emailCliente" placeholder="Digite aqui...">
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+                <p class="text-sm-left text-justify  custom-font-p text-md-right p-0 mb-0" style="color: red;">Observação: Os campos destacados com * são obrigatórios! </p>
+              </div>
+              <div class="col-12 col-mg-6 d-flex justify-content-end align-items-center no-padding-sm spacing-top-sm">
+                <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-4"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                <button type="button" class="btn btn-primary next px-4 py-2 fw-normal" id="nextBtn4">Avançar<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+              </div>
+            </div>
+            
+          </div>
+          <!-- tela 5 INFOS DE CONTATO -->
+          <div class="card-body tela animated" id="tela5">
+            <div class="row mt-0 align-items-start">
+              <div class="col-12">
+                <p class="text-left text-muted mb-0 p-0">Terceira etapa</p>
+                <h3 class="text-left p-0 mb-0 fs-1 ml-0 mt-0">Informações de contato</h3>
+              </div>
+            </div>
+            <div class="row mt-3 align-items-start">
+              <div class="col-12 col-md-6 text-left mt-0 no-padding-sm">
+                <div class="row select-3-cnpj mb-2">
+                  <label for="tipoContato" class="form-label"><span style="color: red">*</span>Tipo de contato:</label>
+                    <div class="col-12 col-md-8">
+                      <select id="tipoContato" class="form-select unidade text-muted">
+                        <option value="fin">Financeiro</option>
+                        <option value="adm">Administrativo</option>
+                        <option selected>Selecione aqui...</option>
+                      </select>
+                    </div>
+                </div>
+                  <div class="row mcc mb-2">
+                    <div class="col-12 col-md-8">
+                        <label for="cpfContato" class="form-label">CPF do contato:</label>
+                        <input type="text" id="cpfContato" class="form-control" placeholder="___.___.___-__">
+                    </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 text-left mt-0">
+                  <div class="row justify-content-start mb-1">
+                    <label for="nomeContato" class="form-label p-0"><span style="color: red">*</span>Nome do contato:</label>
+                    <input type="text" class="form-control" id="nomeContato" placeholder="Digite aqui...">
+                  </div>
+                  <div class="row mb-1">
+                    <div class="col-12 col-md-5 p-0">
+                      <label for="telContato" class="form-label">Telefone:</label>
+                      <input type="text" class="form-control" id="telContato" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="col-12 col-md-6 mx-auto p-0">
+                      <label for="celContato" class="form-label"><span style="color: red">*</span>Celular:</label>
+                      <input type="text" class="form-control" id="celContato" placeholder="(00) 00000-0000">
+                    </div>
+                  </div>
+                  <label for="emailContato" class="form-label"><span style="color: red">*</span>E-mail do contato:</label>
+                  <input type="email" class="form-control" id="emailContato" placeholder="Digite aqui...">
+              </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center">
+              <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+                <p class="text-sm-left text-justify custom-font-p text-md-right p-0 mb-0" style="color: red;">Observação: Os campos destacados com * são obrigatórios! </p>
+              </div>
+              <div class="col-12 col-md-6 d-flex justify-content-end align-items-center no-padding-sm spacing-top-sm">
+                <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-4"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                <button type="button" class="btn btn-primary next px-4 py-2 fw-normal" id="nextBtn5">Avançar<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+              </div>
+            </div>
+            
+          </div>
+          <!-- tela 6 END. E ENTREGA -->
+          <div class="card-body tela animated" id="tela6">
+            <div class="row mt-0 align-items-start">
+              <div class="col-12 no-padding-sm">
+                <p class="text-left text-muted mb-0 p-0">Quarta etapa</p>
+                <h3 class="text-left p-0 mb-0 fs-1 p-0 ml-0 mt-0">Endereço e entrega</h3>
+              </div>
+            </div>
+            <div class="row mt-3 align-items-start mr-0 pl-0">
+              <div class="col-12 col-md-8 text-left mt-0">
+                <div class="row select-3-cnpj mb-2">
+                  <div class="col-12 col-md-4 no-padding-sm">
+                    <label for="cep" class="form-label"><span style="color: red">*</span>CEP:</label>
+                    <input type="text" id="cep" class="form-control" placeholder="_____-___">
+                  </div>
+                  <div class="col-12 col-md-3 no-padding-sm">
+                      <label for="uFisc" class="form-label"><span style="color: red">*</span>UF:</label>
+                      <select id="uFisc" class="form-select unidade text-muted">
+                        <option selected>Selecione...</option>
+                      </select>
+                  </div>
+                  <div class="col-12 col-md-5 no-padding-sm">
+                    <label for="endCidade" class="form-label"><span style="color: red">*</span>Cidade:</label>
+                    <select id="endCidade" class="form-select unidade text-muted">
+                      <option selected>Selecione...</option>
+                    </select>
+                </div>
+                    
+                </div>
+                  <div class="row mcc mb-2">
+                    <label for="logradouro" class="form-label"><span style="color: red">*</span>Logradouro:</label>
+                    <div class="col-12 col-md-4 no-padding-sm">
+                      <select id="tipoLogradouro" class="form-select unidade text-muted">
+                        <option>Rua</option>
+                        <option>Av.</option>
+                        <option selected>Rua/Av.</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-8 spacing-top-sm no-padding-sm">
+                      <input type="text" id="logradouro" class="form-control" placeholder="Ex.: Av. dos pinhais....">
+                    </div>
+                  </div>
+                  <div class="row mcc mb-2">
+                    <div class="col-12 col-md-4 no-padding-sm">
+                      <label for="numLogradouro" class="form-label"><span style="color: red">*</span>Número:</label>
+                      <input type="text" id="numLogradouro" class="form-control" placeholder="Ex.: 1651">
+                    </div>
+                    <div class="col-12 col-md-8 no-padding-sm">
+                      <label for="bairroLogradouro" class="form-label"><span style="color: red">*</span>Bairro:</label>
+                      <input type="text" id="bairroLogradouro" class="form-control" placeholder="Ex.: São Sebastião....">
+                    </div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-4 text-left mt-0">
+                  <div class="row justify-content-start mb-1">
+                    <label for="nomeEntrega" class="form-label p-0"><span style="color: red">*</span>Quem vai receber?</label>
+                    <input type="text" class="form-control" id="nomeEntrega" placeholder="Digite aqui...">
+                  </div>
+                  <div class="row mb-1 justify-content-start">
+                    <div class="col-12 col-md-8 pl-0 no-padding-sm">
+                      <label for="celEntrega" class="form-label"><span style="color: red">*</span>Celular:</label>
+                      <input type="text" class="form-control" id="celEntrega" placeholder="(00) 00000-0000">
+                    </div>
+                  </div>
+                  <label for="emailEntrega" class="form-label"><span style="color: red">*</span>E-mail do contato:</label>
+                  <input type="email" class="form-control" id="emailEntrega" placeholder="Digite aqui...">
+              </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center">
+              <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+                <p class="text-sm-left text-justify custom-font-p text-md-right p-0 mb-0" style="color: red;">Observação: Os campos destacados com * são obrigatórios! </p>
+              </div>
+              <div class="col-12 col-md-6 d-flex justify-content-end align-items-center no-padding-sm spacing-top-sm">
+                <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-4"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                <button type="button" class="btn btn-primary next px-4 py-2 fw-normal" id="nextBtn6">Avançar<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+              </div>
+            </div>
+            
+          </div>
+          <!-- tela 7 DADOS BANCÁRIOS -->
+          <div class="card-body tela animated" id="tela7">
+            <div class="row mt-0 align-items-start">
+              <div class="col-12">
+                <p class="text-left text-muted mb-0 p-0">Etapa final</p>
+                <h3 class="text-left p-0 mb-0 fs-1 ml-0 mt-0">Dados bancários</h3>
+              </div>
+            </div>
+            <div class="row mt-3 align-items-start mr-0 pl-0">
+              <div class="col-12 col-md-8 text-left mt-0">
+                <div class="row select-3-cnpj mb-2">
+                  <div class="col-12 col-md-8">
+                    <label for="bankList" class="form-label"><span style="color: red">*</span>Selecione seu banco:</label>
+                    <select id="bankList" class="form-select unidade text-muted">
+                      <option value="">Selecione...</option>
+                        <option value="Banco do Brasil">Banco do Brasil</option>
+                        <option value="Banco Bradesco">Bradesco</option>
+                        <option value="Banco BTG Pactual">BTG Pactual</option>
+                        <option value="Banco Inter">Inter</option>
+                        <option value="Nubank">Nubank</option>
+                        <option value="Banco Itaú Unibanco">Itaú Unibanco</option>
+                        <option value="Banco Safra">Safra</option>
+                        <option value="Santander">Santander</option>
+                        <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                        <option value="Banco Original">Banco Original</option>
+                        <option value="Sicoob">Sicoob</option>
+                        <option value="Banco Pan">Banco Pan</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-4 spacing-top-sm">
+                      <label for="tipoConta" class="form-label"><span style="color: red">*</span>Tipo de conta:</label>
+                      <select id="tipoConta" class="form-select unidade text-muted">
+                        <option selected>Selecione...</option>
+                        <option value="Conta corrente">Corrente</option>
+                        <option value="Conta poupança">Poupança</option>
+                      </select>
+                  </div>
+                </div>   
+                <div class="row mcc mb-2">
+                  <label for="nroAgencia" class="form-label"><span style="color: red">*</span>Número da agência e dígito:</label>
+                  <div class="col-12 col-md-5">
+                    <input type="text" id="nroAgencia" class="form-control" placeholder="Ex.: 00000000">
+                  </div>
+                  <div class="col-12 col-md-2 spacing-top-sm">
+                    <input type="text" id="digitoAgencia" class="form-control" placeholder="Ex.: 0">
+                  </div>
+                </div>
+                <div class="row mcc mb-2">
+                  <label for="nroConta" class="form-label"><span style="color: red">*</span>Número da conta e dígito:</label>
+                  <div class="col-12 col-md-5">
+                    <input type="text" id="nroConta" class="form-control" placeholder="Ex.: 00000000">
+                  </div>
+                  <div class="col-12 col-md-2 spacing-top-sm">
+                    <input type="text" id="digitoConta" class="form-control" placeholder="Ex.: 0">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center">
+              <div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+                <p class="text-sm-left text-justify custom-font-p text-md-right p-0 mb-0" style="color: red;">Observação: Os campos destacados com * são obrigatórios! </p>
+              </div>
+              <div class="col-12 col-md-6 d-flex justify-content-end align-items-center no-padding-sm spacing-top-sm">
+                <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-4"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                <button type="button" class="btn btn-primary next px-4 py-2 fw-normal" id="nextBtn7" onclick="revisarDados()">Revisar meus dados<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+              </div>
+            </div>
+            
+          </div>
+          <!-- tela 8 REVISÃO DE DADOS -->
+          
+            <input type="hidden" name="<%= request_forgery_protection_token.to_s %>" value="<%= form_authenticity_token %>">
+            <div class="card-body tela animated" id="tela8">
+              <div class="row mt-0 align-items-start">
+                <div class="col-12">
+                  <h3 class="text-center p-0 mb-0 fs-1 ml-0 mt-0">Revise seus dados abaixo:</h3>
+                </div>
+              </div>
+              <div class="row mt-3 mr-0 pl-0 justify-content-center">
+                <div class="col-12 col-md-10 text-left mt-0">
+                  <!-- seção fornecedor -->
+                  <div class="row mb-2 mt-1">
+                    <!-- item fornecedor-->
+                    <div class="col-12">
+                      <h3 class="text-left revision-text-title p-0 mb-0 fs-4 ml-0 mt-0">Fornecedor</h3>
+                      <hr>
+                      <!-- sub-item fornecedor-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-md-right text-sm-center revision-text p-0 m-0">Unidade Fornecedora:</p>
+                        </div>
+                        <div class="col-12 col-md-7 justify-content-sm">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverFornecedor" name="recoverFornecedor" class="form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item fornecedor-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Vendedor:</p>
+                        </div>
+                        <div class="col-12 col-md-7 justify-content-sm">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverVendedor" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item fornecedor-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Taxas da maquininha:</p>
+                        </div>
+                        <div class="col-12 col-md-7 justify-content-sm">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverTaxas" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- seção minha empresa -->
+                  <div class="row mb-2 mt-1">
+                    <!-- item minha empresa-->
+                    <div class="col-12">
+                      <h3 class="text-left revision-text-title p-0 mb-0 fs-4 ml-0 mt-0">Dados da minha empresa</h3>
+                      <hr>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">CPF/CNPJ:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverCadunico" class="form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Razão Social:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverRazao" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Nome Fantasia:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverFantasia" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">E-mail da conta:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverEmail" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Faturamento mensal:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverFaturamento" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Qtd. de maquininhas:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverQtd" class=  "form-control" placeholder="1 (uma)">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item empresa-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">MCC:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="disabledTextInput" class=  "form-control" placeholder="5039">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- seção contato -->
+                  <div class="row mb-2 mt-1">
+                    <!-- item info. de contato-->
+                    <div class="col-12">
+                      <h3 class="text-left revision-text-title p-0 mb-0 fs-4 ml-0 mt-0">Informações de contato</h3>
+                      <hr>
+                      <!-- sub-item contato-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Tipo de contato:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverTipoContato" class="form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item contato-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">CPF do contato:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverCpfcontato" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item contato-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Nome do contato:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverNomeContato" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item contato-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 justify-content-sm col-md-5 align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Telefone do contato:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverTelContato" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item contato-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Celular do contato:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverCelContato" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item contato-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">E-mail do contato:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverEmailContato" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <!-- seção dados bancários -->
+                  <div class="row mb-2 mt-1">
+                    <!-- item dado bancário-->
+                    <div class="col-12">
+                      <h3 class="text-left revision-text-title p-0 mb-0 fs-4 ml-0 mt-0">Dados bancários</h3>
+                      <hr>
+                      <!-- sub-item bancario-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Banco:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverBanco" class="form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item bancario-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Tipo de conta:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverTipoConta" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item bancario-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Número da agência:</p>
+                        </div>
+                        <div class="col-12 col-md-3">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverNroAgencia" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                        <div class="col-12 col-md-2 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Dígito:</p>
+                        </div>
+                        <div class="col-12 col-md-2">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverDigitoAgencia" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item bancario-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Número da conta:</p>
+                        </div>
+                        <div class="col-12 col-md-3">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverNroConta" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                        <div class="col-12 col-md-2 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Dígito:</p>
+                        </div>
+                        <div class="col-12 col-md-2">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverDigitoConta" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- seção endereço -->
+                  <div class="row mb-2 mt-1">
+                    <!-- item endereço-->
+                    <div class="col-12">
+                      <h3 class="text-left revision-text-title p-0 mb-0 fs-4 ml-0 mt-0">Endereço e entrega</h3>
+                      <hr>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">CEP:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverCep" class="form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Estado:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverEstado" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Cidade:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverCidade" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Logradouro:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverLogradouro" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Bairro:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverBairro" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Quem vai receber:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverReceptor" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">Celular:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverCelReceptor" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <!-- sub-item endereço-->
+                      <div class="row mb-1 align-items-center">
+                        <div class="col-12 col-md-5 justify-content-sm align-items-center p-0 m-0 d-flex">
+                          <p class="text-left revision-text p-0 m-0">E-mail:</p>
+                        </div>
+                        <div class="col-12 col-md-7">
+                          <fieldset disabled>
+                            <div class="input-group input-group-sm">
+                              <input type="text" id="recoverEmailReceptor" class=  "form-control" placeholder="">
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5 d-flex align-items-center justify-content-center">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                  <button type="button" class="btn btn-secondary prev px-4 py-2 fw-normal mr-4"><i class="fa-solid fa-backward-step white-icon mr-1"></i>Retornar</button>
+                  <button type="submit" class="btn btn-primary next px-4 py-2 fw-normal" id="enviarFormularioBtn">Prosseguir para envio<i class="fa-solid fa-play ml-1 white-icon"></i></button>
+                </div>
+              </div>
+              
+            </div>
+          
+          <!-- tela 9 CONCLUSÃO -->
+         <!-- <form action="/generate_pdf" method="post"> -->
+          <div class="card-body tela animated" id="tela9">
+            <div class="row p-5 mt-0 align-items-center">
+              <div class="col-12">
+                <h1 class="text-center p-0 mb-0 fw-normal display-3">Tudo certo!</h1>
+              </div>
+            </div>
+            <div class="row p-4 align-items-center">
+              <div class="col-12">
+                <h4 class="text-center custom-h4-sm p-0 mb-0 fw-normal text-muted">Para enviar seu formulário, por favor pressione o botão abaixo e aguarde ser redirecionado.</h4>
+              </div>
+            </div>
+            <div class="row p-5 justify-content-center">
+              <div class="col-12 d-flex justify-content-center mt-4">
+                <a href="#">
+                  <button type="submit" class="btn btn-primary px-4 py-2 fw-normal" id="endBtn">Enviar Formulário</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+  </body>
+</html>

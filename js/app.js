@@ -19,14 +19,50 @@ class FormSubmit {
   
     getFormObject() {
       const formObject = {};
-      const fields = this.form.querySelectorAll("[recoverFornecedor]");
-      fields.forEach((field) => {
-        const label = document.querySelector(`label[for="${field.getAttribute("recoverFornecedor")}"]`);
-        formObject[label ? label.innerText : field.getAttribute("recoverFornecedor")] = field.value;
+    
+      const fields = [
+        "recoverFornecedor",
+        "recoverVendedor",
+        "recoverTaxas",
+        "mcc",
+        "qtdMaquininha",
+        "recoverCadunico",
+        "recoverFaturamento",
+        "recoverRazao",
+        "recoverFantasia",
+        "recoverEmail",
+        "recoverTipoContato",
+        "recoverCpfcontato",
+        "recoverNomeContato",
+        "recoverTelContato",
+        "recoverCelContato",
+        "recoverEmailContato",
+        "recoverBanco",
+        "recoverTipoConta",
+        "recoverNroAgencia",
+        "recoverDigitoAgencia",
+        "recoverNroConta",
+        "recoverDigitoConta",
+        "recoverCep",
+        "recoverEstado",
+        "recoverCidade",
+        "recoverLogradouro",
+        "recoverBairro",
+        "recoverReceptor",
+        "recoverCelReceptor",
+        "recoverEmailReceptor"
+      ];
+    
+      fields.forEach((fieldId) => {
+        const field = document.querySelector(`#${fieldId}`);
+        if (field) {
+          formObject[fieldId] = field.value;
+        }
       });
     
       return formObject;
     }
+    
   
     onSubmission(event) {
       event.preventDefault();

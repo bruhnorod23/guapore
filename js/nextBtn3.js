@@ -55,47 +55,47 @@ function revisarDados() {
 
   // tela fornecedor 
 
-  document.getElementById('recoverFornecedor').placeholder = unidadeFornecedor;
-  document.getElementById('recoverVendedor').placeholder = vendedorFornecedor;
-  document.getElementById("recoverTaxas").placeholder = taxasMaquininha;
+  document.getElementById('recoverFornecedor').value = unidadeFornecedor;
+  document.getElementById('recoverVendedor').value = vendedorFornecedor;
+  document.getElementById("recoverTaxas").value = taxasMaquininha;
 
   // tela dados empresa
 
   document.getElementById("mcc");
   document.getElementById("qtdMaquininha");
-  document.getElementById("recoverCadunico").placeholder = " [ " + tipoCadUnico + " ] " + cadUnicoCliente;
-  document.getElementById("recoverFaturamento").placeholder = faturamentoCliente;
-  document.getElementById("recoverRazao").placeholder = razaoCliente;
-  document.getElementById("recoverFantasia").placeholder = fantasiaCliente;
-  document.getElementById("recoverEmail").placeholder = emailCliente;
+  document.getElementById("recoverCadunico").value = " [ " + tipoCadUnico + " ] " + cadUnicoCliente;
+  document.getElementById("recoverFaturamento").value = faturamentoCliente;
+  document.getElementById("recoverRazao").value = razaoCliente;
+  document.getElementById("recoverFantasia").value = fantasiaCliente;
+  document.getElementById("recoverEmail").value = emailCliente;
 
   // tela infoos de contato
 
-  document.getElementById("recoverTipoContato").placeholder = tipoContato;
-  document.getElementById("recoverCpfcontato").placeholder = cpfContato;
-  document.getElementById("recoverNomeContato").placeholder = nomeContato;
-  document.getElementById("recoverTelContato").placeholder = telContato ? telContato : "Não preenchido";;
-  document.getElementById("recoverCelContato").placeholder = celContato ? telContato : "Não preenchido";;
-  document.getElementById("recoverEmailContato").placeholder = emailContato;   
+  document.getElementById("recoverTipoContato").value = tipoContato;
+  document.getElementById("recoverCpfcontato").value = cpfContato;
+  document.getElementById("recoverNomeContato").value = nomeContato;
+  document.getElementById("recoverTelContato").value = telContato ? telContato : "Não preenchido";;
+  document.getElementById("recoverCelContato").value = celContato ? telContato : "Não preenchido";;
+  document.getElementById("recoverEmailContato").value = emailContato;   
 
   // tela end. e entrega
 
-  document.getElementById("recoverCep").placeholder = cep;
-  document.getElementById("recoverEstado").placeholder = uFisc;
-  document.getElementById("recoverCidade").placeholder = endCidade;
-  document.getElementById("recoverLogradouro").placeholder = " [ " + tipoLogradouro + " ] " + logradouro + " , " + numLogradouro; 
-  document.getElementById("recoverBairro").placeholder = bairroLogradouro;
-  document.getElementById("recoverReceptor").placeholder = nomeEntrega;
-  document.getElementById("recoverCelReceptor").placeholder = celEntrega;
-  document.getElementById("recoverEmailReceptor").placeholder = emailEntrega;
+  document.getElementById("recoverCep").value = cep;
+  document.getElementById("recoverEstado").value = uFisc;
+  document.getElementById("recoverCidade").value = endCidade;
+  document.getElementById("recoverLogradouro").value = " [ " + tipoLogradouro + " ] " + logradouro + " , " + numLogradouro; 
+  document.getElementById("recoverBairro").value = bairroLogradouro;
+  document.getElementById("recoverReceptor").value = nomeEntrega;
+  document.getElementById("recoverCelReceptor").value = celEntrega;
+  document.getElementById("recoverEmailReceptor").value = emailEntrega;
 
   // tela dados bancários
 
-  document.getElementById("recoverBanco").placeholder = bankList;
-  document.getElementById("recoverTipoConta").placeholder = tipoConta;
-  document.getElementById("recoverNroAgencia").placeholder = nroAgencia;
-  document.getElementById("recoverDigitoAgencia").placeholder = digitoAgencia;
-  document.getElementById("recoverNroConta").placeholder = nroConta;
-  document.getElementById("recoverDigitoConta").placeholder = digitoConta;
+  document.getElementById("recoverBanco").value = bankList;
+  document.getElementById("recoverTipoConta").value = tipoConta;
+  document.getElementById("recoverNroAgencia").value = nroAgencia;
+  document.getElementById("recoverDigitoAgencia").value = digitoAgencia;
+  document.getElementById("recoverNroConta").value = nroConta;
+  document.getElementById("recoverDigitoConta").value = digitoConta;
 
 }

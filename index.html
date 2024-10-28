@@ -901,12 +901,12 @@
             emailjs.init("c0zSu_m5m48wyQISP"); // Substitua "YOUR_USER_ID" pelo seu ID de usuário do EmailJS
         })();
         
-        document.getElementById('nextBtnFinal').addEventListener('click', function(event) {
+        document.getElementById('cform').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const serviceID = 'form_envio'; // Substitua "YOUR_SERVICE_ID" pelo seu ID de serviço do EmailJS
             const templateID = 'template_1gvhc4t'; // Substitua "YOUR_TEMPLATE_ID" pelo seu ID de template do EmailJS
-          
+
             emailjs.sendForm(serviceID, templateID, this)
                 .then(function(response) {
                     console.log('E-mail enviado com sucesso!', response.status, response.text);

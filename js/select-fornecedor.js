@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Mapeia as opções para cada região
   const opcoesPorRegiao = {
-    IND: ['Escolha uma opção','Jardel', 'Alan', 'Victória','Axel','Jussara','Paulo'],
+    IND: ['Escolha uma opção','Luciano', 'Alan', 'Victória','Axel','Jussara','Paulo'],
     CDZS: ['Escolha uma opção','Jaque', 'Omar'],
     CDAC: ['Escolha uma opção','Jakson','Aline']
   };

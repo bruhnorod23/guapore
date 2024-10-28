@@ -67,7 +67,6 @@ class FormSubmit {
         this.onSubmission(event);
         await fetch(this.url, {
           method: "POST",
-          mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
